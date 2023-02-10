@@ -1,0 +1,87 @@
+.promo {
+  margin: 0 auto;
+}
+
+.promo__list {
+  padding: 0;
+  margin: 0;
+}
+
+.promo__item {
+  padding: 20px 20px 60px 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  &--flat {
+    background-color: $color-flat-background;
+  }
+
+  &--latte {
+    background-color: $color-latte-background;
+  }
+
+  &--espresso {
+    background-color: $color-espresso-background;
+  }
+}
+
+.promo__info-wrapper {
+  order: 1;
+  margin: 0 auto;
+}
+
+.promo__image-wrapper {
+  order: 0;
+  margin: 0 auto;
+}
+
+.promo__remark {
+  @include violet-title;
+  margin-bottom: 4px;
+}
+
+.promo__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.promo__description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.promo__order-wrapper {
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.promo__old-price {
+  color: $color-primary;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  text-decoration:line-through;
+  margin-right: 6px;
+}
+
+.promo__new-price {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  margin-right: 20px;
+}
+
+.promo__button {
+  width: 113px;
+  min-height: 40px;
+  padding: 8px 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}

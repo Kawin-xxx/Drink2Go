@@ -1,0 +1,23 @@
+.logo {
+
+}
+
+.logo__image {
+  @media (min-width: $tablet-width) {
+    width: 82px;
+    height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 170px;
+    height: 36px;
+  }
+}
+
+.logo__text {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}

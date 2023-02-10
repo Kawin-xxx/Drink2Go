@@ -1,0 +1,78 @@
+.features__wrapper {
+  padding: 50px 20px 60px 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.features__remark {
+  margin: 0;
+  margin-bottom: 4px;
+  @include violet-title;
+}
+
+.features__title {
+  margin: 0;
+  margin-bottom: 36px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.features__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features__item {
+  padding-top: 66px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    transform: translateX(-50%);
+    top: 0;
+    left: 50%;
+    content: "";
+    width: 52px;
+    height: 56px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &--time::before {
+    background-image: url("/img/features-time.svg");
+  }
+
+  &--easement::before {
+    background-image: url("/img/features-easement.svg");
+  }
+
+  &--energy::before {
+    background-image: url("/img/features-energy.svg");
+  }
+
+  &--ecology::before {
+    background-image: url("/img/features-ecology.svg");
+  }
+}
+
+.features__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.features__subtitle {
+  margin: 0;
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.features__description {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}

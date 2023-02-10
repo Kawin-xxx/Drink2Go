@@ -1,0 +1,10 @@
+@mixin violet-title {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  color: $color-primary;
+  display: block;
+  text-transform: uppercase;
+}
+
+
