@@ -1,0 +1,23 @@
+.radio {
+  border: none;
+}
+
+.radio__title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 22px;
+}
+
+.radio__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.radio__item:not(:last-child) {
+  margin-bottom: 22px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}

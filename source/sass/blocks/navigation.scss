@@ -1,0 +1,32 @@
+.navigation__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation__toggle {
+  border: none;
+  position: relative;
+  background-color: inherit;
+  width: 60px;
+  height: 60px;
+}
+
+.navigation__toggle--close {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    right: 22px;
+    height: 1.5px;
+    width: 16px;
+    background-color: $color-black;
+    box-shadow: 0 5px 0 0 $color-black, 0 10px 0 0 $color-black;
+  }
+}
+
+.navigation__toggle--no-js {
+
+}

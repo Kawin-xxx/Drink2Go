@@ -1,0 +1,35 @@
+.catalog {
+  background-color: $color-grey-lightest;
+}
+
+.catalog__wrapper {
+  padding: 50px 20px 44px 20px;
+  min-width: 320px;
+  margin: 0 auto;
+}
+
+.catalog__container {
+}
+
+.catalog__form-wrapper {
+  max-width: 320px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+.catalog__remark {
+  @include violet-title;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.catalog__title {
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+}

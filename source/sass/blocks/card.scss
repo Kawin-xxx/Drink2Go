@@ -1,0 +1,67 @@
+.card {
+  background-color: $color-white;
+  padding: 40px 20px 20px 20px;
+}
+
+.card__link-image {
+  display: block;
+  margin: 0 auto;
+  width: 130px;
+  margin-bottom: 24px;
+}
+
+.promo__image {
+
+}
+
+.card__link-title {
+  text-decoration: none;
+}
+
+.card__title {
+  margin: 0;
+  color: $color-black;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  margin-bottom: 4px;
+}
+
+.card__description {
+  margin: 0;
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.card__price {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.card__button {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 8px 20px 8px 46px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    left: 20px;
+    content: "";
+    width: 20px;
+    height: 16px;
+    background-image: url("/img/add-to-basket.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+  }
+}
+
+.card__price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

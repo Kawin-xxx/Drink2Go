@@ -1,7 +1,8 @@
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import gulpIf from 'gulp-if';
-import less from 'gulp-less';
+import dartSass from "sass";
+import gulpSass from "gulp-sass";
 import postcss from 'gulp-postcss';
 import postUrl from 'postcss-url';
 import autoprefixer from 'autoprefixer';
@@ -15,6 +16,7 @@ import browser from 'browser-sync';
 import bemlinter from 'gulp-html-bemlinter';
 import { htmlValidator } from "gulp-w3c-html-validator";
 
+const sass = gulpSass(dartSass);
 let isDevelopment = true;
 
 export function processMarkup () {
@@ -34,9 +36,9 @@ export function validateMarkup () {
 }
 
 export function processStyles () {
-  return gulp.src('source/less/*.less', { sourcemaps: isDevelopment })
+  return gulp.src('source/sass/*.scss', { sourcemaps: isDevelopment })
     .pipe(plumber())
-    .pipe(less())
+    .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
       postUrl({ assetsPath: '../' }),
       autoprefixer(),
@@ -109,7 +111,7 @@ function reloadServer (done) {
 }
 
 function watchFiles () {
-  gulp.watch('source/less/**/*.less', gulp.series(processStyles));
+  gulp.watch('source/sass/**/*.scss', gulp.series(processStyles));
   gulp.watch('source/js/script.js', gulp.series(processScripts));
   gulp.watch('source/*.html', gulp.series(processMarkup, reloadServer));
 }

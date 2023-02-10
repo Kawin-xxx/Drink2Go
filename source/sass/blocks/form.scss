@@ -1,0 +1,32 @@
+.form__range {
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.form__radio {
+  margin-bottom: 24px;
+}
+
+.form__buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 36px;
+}
+
+.form__button {
+  width: 160px;
+  min-height: 45px;
+  padding: 11px 14px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+
+  &--add {
+    margin-bottom: 24px;
+  }
+}
+
+.form__checkbox {
+  margin-bottom: 35px;
+}
