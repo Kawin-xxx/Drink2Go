@@ -1,5 +1,13 @@
 .copyright {
-  padding: 20px 50px 30px;
+  padding: 17px 40px 30px 58px;
+
+  @media (min-width: $tablet-width) {
+    padding: 19px 55px 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 12px 55px 40px;
+  }
 }
 
 .copyright__text {
@@ -15,7 +23,24 @@
   color: inherit;
   display: inline-flex;
   align-items: center;
-  column-gap: 4px;
+
+  &:hover,
+  &:focus-visible {
+    color: $color-primary;
+  }
+
+  &:hover .copyright__logo,
+  &:focus-visible .copyright__logo {
+    fill: $color-primary;
+  }
+
+  &:active {
+    color: $color-primary-dark;
+  }
+
+  &:active .copyright__logo {
+    fill: $color-primary-dark;
+  }
 }
 
 .copyright__logo {

@@ -1,13 +1,82 @@
 .user-list {
+  display: flex;
+}
 
+.user-list__icon {
+  fill: $color-black;
+
+  @media (min-width: $desktop-width) {
+    margin-right: 8px;
+  }
 }
 
 .user-list__item {
   width: 60px;
   height: 60px;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    height: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: min-content;
+    height: 80px;
+  }
+}
+
+.user-list__item:not(:last-child) {
+  @media (min-width: $desktop-width) {
+    margin-right: 23px;
+  }
+}
+
+.user-list__link {
+  display: block;
+  width: 60px;
+  height: 60px;
   padding: 22px;
+  text-decoration: none;
+  color: $color-black;
+
+  &:active {
+    background-color: $color-secondary;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 80px;
+    display: flex;
+    min-width: min-content;
+    padding: 32px 20px;
+
+    &:active,
+    &:hover,
+    &:focus-visible {
+      .user-list__text {
+        color: $color-primary;
+      }
+
+      .user-list__icon {
+        fill: $color-primary;
+      }
+    }
+
+    &:active {
+      background-color: $color-secondary;
+    }
+  }
 }
 
 .user-list__text {
   display: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+
+  @media (min-width: $desktop-width) {
+    display: inline;
+    color: $color-black;
+  }
 }

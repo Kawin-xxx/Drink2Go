@@ -85,6 +85,7 @@ export function createStack () {
 export function copyAssets () {
   return gulp.src([
     'source/fonts/**/*.{woff2,woff}',
+    'source/css/swiper-bundle.min.css',
     'source/*.ico',
     'source/*.webmanifest',
   ], {

@@ -1,17 +1,30 @@
 .card {
   background-color: $color-white;
   padding: 40px 20px 20px 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 49px 30px 31px 31px;
+  }
+
+  &:hover,
+  &:focus-visible {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  }
 }
 
 .card__link-image {
   display: block;
   margin: 0 auto;
   width: 130px;
-  margin-bottom: 24px;
-}
+  margin-bottom: 20px;
 
-.promo__image {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 26px;
+  }
 
+  @media (min-width: $desktop-width) {
+    margin-bottom: 28px;
+  }
 }
 
 .card__link-title {
@@ -25,6 +38,12 @@
   font-size: 18px;
   line-height: 32px;
   margin-bottom: 4px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 10px;
+  }
 }
 
 .card__description {
@@ -33,15 +52,21 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .card__price {
   font-weight: 600;
   font-size: 20px;
   line-height: 32px;
+  padding-right: 25px;
 }
 
 .card__button {
+  text-decoration: none;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;

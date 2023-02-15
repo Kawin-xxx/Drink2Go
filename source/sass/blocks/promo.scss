@@ -12,6 +12,12 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  overflow-x: hidden;
+
+  &--espresso {
+    background-color: $color-espresso-background;
+  }
+
   &--flat {
     background-color: $color-flat-background;
   }
@@ -20,19 +26,82 @@
     background-color: $color-latte-background;
   }
 
-  &--espresso {
-    background-color: $color-espresso-background;
+  @media (min-width: $tablet-width) {
+    padding: 60px 80px 0 80px;
+
+    &--flat {
+      background: linear-gradient($color-flat-background 76%, $color-white 20%);
+    }
+
+    &--latte {
+      background: linear-gradient($color-latte-background 76%, $color-white 20%);
+    }
+
+    &--espresso {
+      background: linear-gradient($color-espresso-background 76%, $color-white 20%);
+    }
+  }
+
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    padding: 30px 80px 78px 105px;
+    text-align: left;
+
+    &--espresso {
+      background: none;
+      background-color: $color-espresso-background;
+    }
+
+    &--flat {
+      background: none;
+      background-color: $color-flat-background;
+    }
+
+    &--latte {
+      background: none;
+      background-color: $color-latte-background;
+    }
   }
 }
 
 .promo__info-wrapper {
   order: 1;
   margin: 0 auto;
+
+  @media (min-width: $desktop-width) {
+    align-self: center;
+  }
 }
 
 .promo__image-wrapper {
   order: 0;
   margin: 0 auto;
+  margin-bottom: 5px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    order: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 0;
+    margin-right: 30px;
+    min-width: 600px;
+    height: auto;
+  }
+}
+
+.promo__image {
+  @media (min-width: $tablet-width) {
+    width: 476px;
+    height: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 600px;
+    height: auto;
+  }
 }
 
 .promo__remark {
@@ -46,6 +115,13 @@
   line-height: 48px;
   margin: 0;
   margin-bottom: 10px;
+  letter-spacing: 1px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 56px;
+    line-height: 80px;
+    margin-bottom: 16px;
+  }
 }
 
 .promo__description {
@@ -53,12 +129,26 @@
   font-size: 14px;
   line-height: 20px;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 23px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
+  }
 }
 
 .promo__order-wrapper {
   flex-wrap: wrap;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .promo__old-price {
@@ -66,8 +156,12 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
-  text-decoration:line-through;
+  text-decoration: line-through;
   margin-right: 6px;
+
+  @media (min-width: $desktop-width) {
+    margin-right: 3px;
+  }
 }
 
 .promo__new-price {
@@ -78,6 +172,7 @@
 }
 
 .promo__button {
+  text-decoration: none;
   width: 113px;
   min-height: 40px;
   padding: 8px 20px;
