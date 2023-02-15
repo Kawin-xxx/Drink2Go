@@ -6,14 +6,44 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
+  cursor: pointer;
+}
 
-  &--violet {
-    background-color: $color-primary;
+.button--violet {
+  background-color: $color-primary;
+  color: $color-white;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $color-primary-light;
+  }
+
+  &:active {
+    background-color: $color-primary-dark;
+  }
+
+  &:disabled {
+    background-color: $color-grey;
+  }
+}
+
+.button--white {
+  background-color: $color-white;
+  color: $color-primary;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $color-primary-light;
     color: $color-white;
   }
 
-  &--white {
-    background-color: $color-white;
-    color: $color-primary;
+  &:active {
+    background-color: $color-primary-dark;
+    color: $color-white;
+  }
+
+  &:disabled {
+    background-color: $color-grey-light;
+    color: $color-white;
   }
 }

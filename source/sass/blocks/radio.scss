@@ -1,5 +1,6 @@
 .radio {
   border: none;
+  padding: 0;
 }
 
 .radio__title {
@@ -15,8 +16,88 @@
   padding: 0;
 }
 
-.radio__item:not(:last-child) {
-  margin-bottom: 22px;
+.radio__control-mark {
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: $color-white;
+  border: 2px solid $color-grey-light;
+}
+
+.radio__item {
+  &:not(:last-child) {
+    margin-bottom: 19px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &:hover .radio__input:not(:disabled):not(:checked) ~ .radio__control-mark,
+  &:focus ~ .radio__control-mark {
+    border-color: $color-primary-light;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 16px;
+      height: 16px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background-color: $color-primary-opacity;
+    }
+  }
+}
+
+.radio__input:disabled ~ .radio__control-label {
+  color: $color-grey;
+}
+
+.radio__input:disabled:checked ~ .radio__control-label {
+  color: $color-grey;
+
+  & ~ .radio__control-mark {
+    border-color: $color-primary-opacity;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 16px;
+      height: 16px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background-color: $color-primary-opacity;
+    }
+  }
+}
+
+.radio__input:checked ~ .radio__control-mark {
+  border-color: $color-primary;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $color-primary;
+  }
+}
+
+.radio__control {
+  position: relative;
+}
+
+.radio__control-label {
+  padding-left: 34px;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;

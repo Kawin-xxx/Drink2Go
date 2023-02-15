@@ -1,0 +1,106 @@
+.swiper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-wrapper {
+  height: 100%;
+}
+
+.swiper-slide {
+  height: auto;
+}
+
+.swiper-button {
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  color: $color-primary;
+  background-color: transparent;
+  border: none;
+  top: 22px;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+  }
+
+  &::after {
+    font-size: 20px;
+
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      top: 310px;
+    }
+
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      top: 345px;
+    }
+  }
+}
+
+.swiper-button-prev {
+  left: 0;
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(90deg, $color-white 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &:active {
+    background: linear-gradient(90deg, $color-primary-opacity 0%, rgba(120, 89, 207, 0) 100%);
+  }
+}
+
+.swiper-button-next {
+  right: 0;
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(270deg, $color-white 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &:active {
+    background: linear-gradient(270deg, $color-primary-opacity 0%, rgba(120, 89, 207, 0) 100%);
+  }
+}
+
+.swiper-pagination {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    margin-bottom: 55px;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 62px;
+  height: 4px;
+  background-color: $color-white;
+  border-radius: 0;
+  opacity: 1;
+
+  &:hover,
+  &:focus {
+    background-color: $color-primary-opacity;
+  }
+
+
+  &:focus:not(:focus-visible) {
+    background-color: $color-primary;
+  }
+
+  &:focus-visible {
+    background-color: $color-primary-opacity;
+  }
+
+  &:active {
+    background-color: $color-primary;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $color-primary;
+}
